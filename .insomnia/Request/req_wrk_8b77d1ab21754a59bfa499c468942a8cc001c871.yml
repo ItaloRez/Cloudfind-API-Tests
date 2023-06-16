@@ -1,0 +1,67 @@
+_id: req_wrk_8b77d1ab21754a59bfa499c468942a8cc001c871
+type: Request
+parentId: wrk_8b77d1ab21754a59bfa499c468942a8c
+modified: 1686929000756
+created: 1686929000756
+url: "{{ base_url }}/sku/"
+name: Add Sku Data
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: >-
+    {
+      "baremetal": false,
+      "classtype": "T4g Series",
+      "company": "Amazon",
+      "cpu": 2,
+      "dedicated": false,
+      "description": "A maquina t4g.nano Linux tem 2 vCPUS e 1 GB de memoria. O valor comeca em $0.01 por hora ou $7.2 por mes",
+      "disk": {
+        "maxDisks": 0,
+        "value": 0,
+        "unit": ""
+      },
+      "external_network_speed": {
+        "value": 59605,
+        "unit": "MB"
+      },
+      "gpu": 0,
+      "internal_network_speed": {
+        "value": 0,
+        "unit": "B"
+      },
+      "link": "https://aws.amazon.com/ec2/instance-types/",
+      "location": "america.brazil.sao paulo.1",
+      "name": "t4g.nano Linux",
+      "price": {
+        "currency": "USD",
+        "date": "2023-05-29T00:03:54.298672",
+        "unit": "hour",
+        "value": 0.01
+      },
+      "ram": {
+        "value": 1,
+        "unit": "GB"
+      },
+      "update_date": "2023-05-29T00:03:54.298672",
+      "type": "economic",
+      "cloudStoreOnly": true
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication:
+  type: apikey
+  key: X-API-Key
+  value: "{{ xApiKey }}"
+  addTo: header
+metaSortKey: -1686929000756
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

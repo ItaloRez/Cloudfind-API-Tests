@@ -1,0 +1,20 @@
+_id: env_env_b378e4699b6475ac269ed5399fb51f70a4aadd50_sub__9c17e047
+type: Environment
+parentId: env_b378e4699b6475ac269ed5399fb51f70a4aadd50
+modified: 1686931696158
+created: 1686929000761
+name: OpenAPI env example.com
+data:
+  scheme: http
+  base_path: ""
+  host: cloudfind.fly.dev
+  xApiKey: xApiKey
+dataPropertyOrder:
+  "&":
+    - scheme
+    - base_path
+    - host
+    - xApiKey
+color: null
+isPrivate: false
+metaSortKey: 1686929000761

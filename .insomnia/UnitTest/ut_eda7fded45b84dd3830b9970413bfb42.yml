@@ -1,0 +1,11 @@
+_id: ut_eda7fded45b84dd3830b9970413bfb42
+type: UnitTest
+parentId: uts_96dd6dca372d4f81b3799904d628433c
+modified: 1686932035416
+created: 1686931553525
+requestId: req_wrk_8b77d1ab21754a59bfa499c468942a8cea22a5c5
+name: "Retorna 401 quando não envia o header X-API-key "
+code: |-
+  const response = await insomnia.send();
+
+  expect(response.status).to.equal(200);

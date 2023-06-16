@@ -1,0 +1,21 @@
+_id: ut_dbf84c133d5f4a13a5ce9ad2fbda98af
+type: UnitTest
+parentId: uts_96dd6dca372d4f81b3799904d628433c
+modified: 1686931513484
+created: 1686930179143
+requestId: req_wrk_8b77d1ab21754a59bfa499c468942a8cea22a5c5
+name: Retorna 401 quando não envia o header X-API-key correto
+code: >
+  const response = await insomnia.send();
+
+
+  const body = JSON.parse(response.data);
+
+
+  expect(body).to.be.an('object');
+
+  expect(body).to.have.property('detail');
+
+  expect(body.detail).to.be.an('string');
+
+  expect(body.detail).to.be.equal("Invalid API Key. Check that you are passing a 'X-API-Key' on your header.");

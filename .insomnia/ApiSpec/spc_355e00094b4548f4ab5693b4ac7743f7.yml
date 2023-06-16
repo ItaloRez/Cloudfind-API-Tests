@@ -1,0 +1,75 @@
+_id: spc_355e00094b4548f4ab5693b4ac7743f7
+type: ApiSpec
+parentId: wrk_8b77d1ab21754a59bfa499c468942a8c
+modified: 1686929000768
+created: 1686928783862
+fileName: CloudFind.yaml
+contents: '{"openapi":"3.0.2","info":{"title":"FastAPI","version":"0.1.0"},"paths":{"/sku/":{"get":{"tags":["Sku"],"summary":"Get
+  Skus","operationId":"get_skus_sku__get","parameters":[{"required":false,"schema":{"title":"Query","type":"string","default":{}},"name":"query","in":"query"},{"required":false,"schema":{"title":"Page","type":"integer","default":1},"name":"page","in":"query"},{"required":false,"schema":{"title":"Per
+  Page","type":"integer","default":-1},"name":"per_page","in":"query"}],"responses":{"200":{"description":"Skus
+  retrieved","content":{"application/json":{"schema":{}}}},"422":{"description":"Validation
+  Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/HTTPValidationError"}}}}},"security":[{"APIKeyHeader":[]}]},"post":{"tags":["Sku"],"summary":"Add
+  Sku
+  Data","operationId":"add_sku_data_sku__post","requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/SkuSchema"}}},"required":true},"responses":{"200":{"description":"Sku
+  data added into the
+  database","content":{"application/json":{"schema":{"$ref":"#/components/schemas/AddSkuResponseModel"}}}},"422":{"description":"Validation
+  Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/HTTPValidationError"}}}}},"security":[{"APIKeyHeader":[]}]}},"/sku/bulk":{"post":{"tags":["Sku"],"summary":"Add
+  Sku
+  Data","operationId":"add_sku_data_sku_bulk_post","requestBody":{"content":{"application/json":{"schema":{"title":"Skus","type":"array","items":{"$ref":"#/components/schemas/SkuSchema"}}}},"required":true},"responses":{"200":{"description":"Sku
+  data added into the
+  database","content":{"application/json":{"schema":{"$ref":"#/components/schemas/AddSkuResponseModel"}}}},"422":{"description":"Validation
+  Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/HTTPValidationError"}}}}},"security":[{"APIKeyHeader":[]}]}},"/sku/query":{"get":{"tags":["Sku"],"summary":"Get
+  Query","operationId":"get_query_sku_query_get","responses":{"200":{"description":"Query
+  values
+  retrieved","content":{"application/json":{"schema":{}}}}},"security":[{"APIKeyHeader":[]}]}},"/sku/{id}":{"get":{"tags":["Sku"],"summary":"Get
+  Sku
+  Data","operationId":"get_sku_data_sku__id__get","parameters":[{"required":true,"schema":{"title":"Id"},"name":"id","in":"path"}],"responses":{"200":{"description":"Sku
+  data
+  retrieved","content":{"application/json":{"schema":{}}}},"422":{"description":"Validation
+  Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/HTTPValidationError"}}}}},"security":[{"APIKeyHeader":[]}]},"put":{"tags":["Sku"],"summary":"Update
+  Sku
+  Data","operationId":"update_sku_data_sku__id__put","parameters":[{"required":true,"schema":{"title":"Id","type":"string"},"name":"id","in":"path"}],"requestBody":{"content":{"application/json":{"schema":{"$ref":"#/components/schemas/UpdateSkuModel"}}},"required":true},"responses":{"200":{"description":"Successful
+  Response","content":{"application/json":{"schema":{}}}},"422":{"description":"Validation
+  Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/HTTPValidationError"}}}}},"security":[{"APIKeyHeader":[]}]},"delete":{"tags":["Sku"],"summary":"Delete
+  Sku
+  Data","operationId":"delete_sku_data_sku__id__delete","parameters":[{"required":true,"schema":{"title":"Id","type":"string"},"name":"id","in":"path"}],"responses":{"200":{"description":"Sku
+  data deleted from the
+  database","content":{"application/json":{"schema":{}}}},"422":{"description":"Validation
+  Error","content":{"application/json":{"schema":{"$ref":"#/components/schemas/HTTPValidationError"}}}}},"security":[{"APIKeyHeader":[]}]}},"/sku/all/sku":{"delete":{"tags":["Sku"],"summary":"Delete
+  All Sku
+  Data","operationId":"delete_all_sku_data_sku_all_sku_delete","responses":{"200":{"description":"All
+  Sku data deleted from the
+  database","content":{"application/json":{"schema":{}}}}},"security":[{"APIKeyHeader":[]}]}},"/sku/aws/json":{"post":{"tags":["Sku"],"summary":"Post
+  Json
+  Skus","operationId":"post_json_skus_sku_aws_json_post","responses":{"200":{"description":"AWS
+  json","content":{"application/json":{"schema":{}}}}},"security":[{"APIKeyHeader":[]}]}}},"components":{"schemas":{"AddSkuResponseModel":{"title":"AddSkuResponseModel","required":["data","code","message"],"type":"object","properties":{"data":{"title":"Data","type":"array","items":{}},"code":{"title":"Code","type":"integer"},"message":{"title":"Message","type":"string"}},"example":{"data":{"baremetal":false,"classtype":"T4g
+  Series","company":"Amazon","cpu":2,"dedicated":false,"description":"A maquina
+  t4g.nano Linux tem 2 vCPUS e 1 GB de memoria. O valor comeca em $0.01 por hora
+  ou $7.2 por
+  mes","disk":{"maxDisks":0,"value":0,"unit":""},"external_network_speed":{"value":59605,"unit":"MB"},"gpu":0.0,"internal_network_speed":{"value":0,"unit":"B"},"link":"https://aws.amazon.com/ec2/instance-types/","location":"america.brazil.sao
+  paulo.1","name":"t4g.nano
+  Linux","price":{"currency":"USD","date":"2023-05-29T00:03:54.298672","unit":"hour","value":0.01},"ram":{"value":1,"unit":"GB"},"update_date":"2023-05-29T00:03:54.298672","type":"economic","cloudStoreOnly":true},"code":200,"message":"Sku
+  added
+  successfully"}},"HTTPValidationError":{"title":"HTTPValidationError","type":"object","properties":{"detail":{"title":"Detail","type":"array","items":{"$ref":"#/components/schemas/ValidationError"}}}},"SkuSchema":{"title":"SkuSchema","required":["company","name","location","update_date","description","link","classtype","dedicated","baremetal","cpu","ram","disk","gpu","internal_network_speed","external_network_speed","price","type"],"type":"object","properties":{"company":{"title":"Company","type":"string"},"name":{"title":"Name","type":"string"},"location":{"title":"Location","type":"string"},"update_date":{"title":"Update
+  Date","type":"string"},"description":{"title":"Description","type":"string"},"link":{"title":"Link","type":"string"},"classtype":{"title":"Classtype","type":"string"},"dedicated":{"title":"Dedicated","type":"boolean"},"baremetal":{"title":"Baremetal","type":"boolean"},"cpu":{"title":"Cpu","type":"number"},"ram":{"title":"Ram","type":"object"},"disk":{"title":"Disk","type":"object"},"gpu":{"title":"Gpu","type":"number"},"internal_network_speed":{"title":"Internal
+  Network Speed","type":"object"},"external_network_speed":{"title":"External
+  Network
+  Speed","type":"object"},"price":{"title":"Price","type":"object"},"type":{"title":"Type","type":"string"}},"example":{"baremetal":false,"classtype":"T4g
+  Series","company":"Amazon","cpu":2,"dedicated":false,"description":"A maquina
+  t4g.nano Linux tem 2 vCPUS e 1 GB de memoria. O valor comeca em $0.01 por hora
+  ou $7.2 por
+  mes","disk":{"maxDisks":0,"value":0,"unit":""},"external_network_speed":{"value":59605,"unit":"MB"},"gpu":0.0,"internal_network_speed":{"value":0,"unit":"B"},"link":"https://aws.amazon.com/ec2/instance-types/","location":"america.brazil.sao
+  paulo.1","name":"t4g.nano
+  Linux","price":{"currency":"USD","date":"2023-05-29T00:03:54.298672","unit":"hour","value":0.01},"ram":{"value":1,"unit":"GB"},"update_date":"2023-05-29T00:03:54.298672","type":"economic","cloudStoreOnly":true}},"UpdateSkuModel":{"title":"UpdateSkuModel","type":"object","properties":{"company":{"title":"Company","type":"string"},"name":{"title":"Name","type":"string"},"location":{"title":"Location","type":"string"},"update_date":{"title":"Update
+  Date","type":"string"},"description":{"title":"Description","type":"string"},"link":{"title":"Link","type":"string"},"classtype":{"title":"Classtype","type":"string"},"dedicated":{"title":"Dedicated","type":"boolean"},"baremetal":{"title":"Baremetal","type":"boolean"},"cpu":{"title":"Cpu","type":"number"},"ram":{"title":"Ram","type":"number"},"disk":{"title":"Disk","type":"number"},"gpu":{"title":"Gpu","type":"number"},"internal_network_speed":{"title":"Internal
+  Network Speed","type":"number"},"external_network_speed":{"title":"External
+  Network
+  Speed","type":"number"},"price":{"title":"Price","type":"object"}},"example":{"baremetal":false,"classtype":"T4g
+  Series","company":"Amazon","cpu":2,"dedicated":false,"description":"A maquina
+  t4g.nano Linux tem 2 vCPUS e 1 GB de memoria. O valor comeca em $0.01 por hora
+  ou $7.2 por
+  mes","disk":{"maxDisks":0,"value":0,"unit":""},"external_network_speed":{"value":59605,"unit":"MB"},"gpu":0.0,"internal_network_speed":{"value":0,"unit":"B"},"link":"https://aws.amazon.com/ec2/instance-types/","location":"america.brazil.sao
+  paulo.1","name":"t4g.nano
+  Linux","price":{"currency":"USD","date":"2023-05-29T00:03:54.298672","unit":"hour","value":0.01},"ram":{"value":1,"unit":"GB"},"update_date":"2023-05-29T00:03:54.298672","type":"economic","cloudStoreOnly":true}},"ValidationError":{"title":"ValidationError","required":["loc","msg","type"],"type":"object","properties":{"loc":{"title":"Location","type":"array","items":{"type":"string"}},"msg":{"title":"Message","type":"string"},"type":{"title":"Error
+  Type","type":"string"}}}},"securitySchemes":{"APIKeyHeader":{"type":"apiKey","in":"header","name":"X-API-Key"}}}}'
+contentType: yaml

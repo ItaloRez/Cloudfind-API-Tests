@@ -1,0 +1,10 @@
+_id: ut_68267d787ec24a19b540d0771a240192
+type: UnitTest
+parentId: uts_96dd6dca372d4f81b3799904d628433c
+modified: 1686948902239
+created: 1686948896675
+requestId: req_wrk_8b77d1ab21754a59bfa499c468942a8cc001c871
+name: Listar sku pelo id
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);

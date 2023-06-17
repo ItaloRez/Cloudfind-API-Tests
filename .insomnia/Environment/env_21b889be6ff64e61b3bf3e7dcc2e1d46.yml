@@ -1,13 +1,13 @@
-_id: env_env_b378e4699b6475ac269ed5399fb51f70a4aadd50_sub__9c17e047
+_id: env_21b889be6ff64e61b3bf3e7dcc2e1d46
 type: Environment
 parentId: env_b378e4699b6475ac269ed5399fb51f70a4aadd50
-modified: 1686942285282
-created: 1686929000761
-name: Produção
+modified: 1686942214407
+created: 1686942179679
+name: Desenvolvimento
 data:
-  scheme: https
+  scheme: http
   base_path: ""
-  host: cloudfind.fly.dev
+  host: localhost:8000
   xApiKey: d41d8cd98f00b204e9800998ecf8427e
 dataPropertyOrder:
   "&":
@@ -15,6 +15,6 @@ dataPropertyOrder:
     - base_path
     - host
     - xApiKey
-color: "#7d69cb"
+color: "#a80000"
 isPrivate: false
-metaSortKey: 1686929000761
+metaSortKey: 1686942179679

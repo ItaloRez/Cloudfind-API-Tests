@@ -1,0 +1,18 @@
+_id: ut_3327dcc662d6417b9c08ef5130948170
+type: UnitTest
+parentId: uts_2cf95504f31f43afb5549b266d490de8
+modified: 1686948848827
+created: 1686944045751
+requestId: req_wrk_8b77d1ab21754a59bfa499c468942a8cc001c871
+name: Cria uma nova Sku
+code: |-
+  const response = await insomnia.send();
+
+  expect(response.status).to.equal(200);
+
+  const body = JSON.parse(response.data);
+
+  expect(body.data).to.be.an('array');
+  expect(body.data[0].company).to.equal("Amazon");
+  expect(body.data[0].name).to.equal("t4g.nano Linux");
+  expect(body.data[0].location).to.equal("america.brazil.sao paulo.1");

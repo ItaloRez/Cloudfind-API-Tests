@@ -1,0 +1,10 @@
+_id: ut_6a317e85c2a04d7eba0df4f517ad1a8d
+type: UnitTest
+parentId: uts_1878d39f481e407f9bff1e7d2ef0ae78
+modified: 1686969529154
+created: 1686969526139
+requestId: req_wrk_8b77d1ab21754a59bfa499c468942a8cf22f151c
+name: Edição de sku
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);

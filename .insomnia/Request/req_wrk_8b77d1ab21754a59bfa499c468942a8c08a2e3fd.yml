@@ -1,7 +1,7 @@
 _id: req_wrk_8b77d1ab21754a59bfa499c468942a8c08a2e3fd
 type: Request
-parentId: wrk_8b77d1ab21754a59bfa499c468942a8c
-modified: 1686929000736
+parentId: fld_5a6c8a68085443e0a6a8a65e7f63882b
+modified: 1686939453409
 created: 1686929000736
 url: "{{ base_url }}/sku/aws/json"
 name: Post Json Skus
@@ -15,7 +15,7 @@ authentication:
   key: X-API-Key
   value: "{{ xApiKey }}"
   addTo: header
-metaSortKey: -1686929000736
+metaSortKey: -1686929000358
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

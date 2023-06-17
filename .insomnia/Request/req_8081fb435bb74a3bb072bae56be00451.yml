@@ -1,0 +1,34 @@
+_id: req_8081fb435bb74a3bb072bae56be00451
+type: Request
+parentId: fld_a5aff1cee39a4e6795a2319c3b4ffdaa
+modified: 1686941397132
+created: 1686939485823
+url: "{{base_url}}/{{resource}}"
+name: Get Skus Wrong API-Key
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_9a782721edb64b588f025683bd1caea4
+    name: page
+    value: "1"
+    description: ""
+  - id: pair_e14b45bb0f1c467ea64689a5d4cd22f6
+    name: per_page
+    value: "1"
+    description: ""
+headers: []
+authentication:
+  type: apikey
+  disabled: false
+  key: X-API-Key
+  value: "1"
+  addTo: header
+metaSortKey: -1686929000720.5
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,22 @@
+_id: ut_ba955bf787c54d91a3cfe5e065bb4fda
+type: UnitTest
+parentId: uts_96dd6dca372d4f81b3799904d628433c
+modified: 1686940249785
+created: 1686939574237
+requestId: req_wrk_8b77d1ab21754a59bfa499c468942a8cea22a5c5
+name: Retorna 200 quando faz a request corretamente
+code: |-
+  const response = await insomnia.send();
+
+  expect(response.status).to.equal(200);
+
+  const body = JSON.parse(response.data);
+
+  expect(body).to.be.an('object');
+  expect(body).to.have.property('data');
+  expect(body.data).to.be.an('object');
+  expect(body.data).to.have.property('skus');
+  expect(body.data).to.have.property('total');
+  expect(body.data.skus).to.be.an('array');
+  expect(body.data.skus).to.have.lengthOf(2);
+  expect(body.data.total).to.be.an('number');

@@ -1,10 +1,10 @@
-_id: req_wrk_8b77d1ab21754a59bfa499c468942a8cc001c871
+_id: req_ed1541e061d843f88b51dee859dffc32
 type: Request
 parentId: fld_206ff400173949bcac5bc450b46af443
-modified: 1686942146496
-created: 1686929000756
+modified: 1686942326870
+created: 1686942321685
 url: "{{ base_url }}/{{resource}}/"
-name: Add Sku Data
+name: Add Sku Data no API-Key
 description: ""
 method: POST
 body:
@@ -57,7 +57,8 @@ authentication:
   key: X-API-Key
   value: "{{ xApiKey }}"
   addTo: header
-metaSortKey: -1686932092873.75
+  disabled: true
+metaSortKey: -1686930546815.875
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

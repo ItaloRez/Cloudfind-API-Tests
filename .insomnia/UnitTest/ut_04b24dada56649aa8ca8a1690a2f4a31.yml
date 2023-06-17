@@ -1,0 +1,28 @@
+_id: ut_04b24dada56649aa8ca8a1690a2f4a31
+type: UnitTest
+parentId: uts_96dd6dca372d4f81b3799904d628433c
+modified: 1686949258451
+created: 1686949023412
+requestId: req_wrk_8b77d1ab21754a59bfa499c468942a8c9b9b9b18
+name: "Listar queries "
+code: |-
+  const response = await insomnia.send();
+  expect(response.status).to.equal(200);
+
+  const body = JSON.parse(response.data);
+
+  expect(body.data).to.be.an('object');
+  expect(body.data).to.have.property('min_ram');
+  expect(body.data).to.have.property('max_ram');
+
+  expect(body.data).to.have.property('min_cpu');
+  expect(body.data).to.have.property('max_cpu');
+
+  expect(body.data).to.have.property('min_disk');
+  expect(body.data).to.have.property('max_disk');
+
+  expect(body.data).to.have.property('max_gpu');
+  expect(body.data).to.have.property('min_gpu');
+
+  expect(body.data).to.have.property('max_external_network_speed');
+  expect(body.data).to.have.property('min_external_network_speed');

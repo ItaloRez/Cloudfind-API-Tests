@@ -1,0 +1,10 @@
+_id: ut_8ef2c9bb617342a0a04dfbb59e8c78dd
+type: UnitTest
+parentId: uts_399c6481fe954ed380e4b961e419b50b
+modified: 1686969635275
+created: 1686969632145
+requestId: req_wrk_8b77d1ab21754a59bfa499c468942a8cbf6c8be6
+name: Deletar sku
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);

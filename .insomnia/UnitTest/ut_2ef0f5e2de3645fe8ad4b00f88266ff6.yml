@@ -1,0 +1,23 @@
+_id: ut_2ef0f5e2de3645fe8ad4b00f88266ff6
+type: UnitTest
+parentId: uts_96dd6dca372d4f81b3799904d628433c
+modified: 1686940439718
+created: 1686940285606
+requestId: req_wrk_8b77d1ab21754a59bfa499c468942a8cea22a5c5
+name: O array de skus deve estar ordenado por preço
+code: |-
+  const response = await insomnia.send();
+
+  expect(response.status).to.equal(200);
+
+  const body = JSON.parse(response.data);
+
+  expect(body.data.skus).to.be.an('array');
+  expect(body.data.skus).to.have.lengthOf(2);
+
+  const sku1 = body.data.skus[0]
+  const sku2 = body.data.skus[1]
+
+  const sk1HasLowerPrice = sku1.price.value <= sku2.price.value
+
+  expect(sk1HasLowerPrice).to.be.equal(true);

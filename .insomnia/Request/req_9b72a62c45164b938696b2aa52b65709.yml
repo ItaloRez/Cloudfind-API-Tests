@@ -1,0 +1,29 @@
+_id: req_9b72a62c45164b938696b2aa52b65709
+type: Request
+parentId: fld_a5aff1cee39a4e6795a2319c3b4ffdaa
+modified: 1686941391366
+created: 1686938393488
+url: "{{base_url}}/{{resource}}"
+name: Get Skus No API-Key
+description: ""
+method: GET
+body: {}
+parameters:
+  - id: pair_9a782721edb64b588f025683bd1caea4
+    name: page
+    value: "1"
+    description: ""
+  - id: pair_e14b45bb0f1c467ea64689a5d4cd22f6
+    name: per_page
+    value: "1"
+    description: ""
+headers: []
+authentication: {}
+metaSortKey: -1686929000733
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

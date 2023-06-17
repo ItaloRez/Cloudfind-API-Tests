@@ -1,0 +1,10 @@
+_id: ut_fda7735541c647a1be3cd4d323f0f730
+type: UnitTest
+parentId: uts_2cf95504f31f43afb5549b266d490de8
+modified: 1686949408198
+created: 1686949405041
+requestId: req_wrk_8b77d1ab21754a59bfa499c468942a8c25cb1202
+name: Criar várias skus de uma vez
+code: |-
+  const response1 = await insomnia.send();
+  expect(response1.status).to.equal(200);

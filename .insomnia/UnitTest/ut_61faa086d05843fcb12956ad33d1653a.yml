@@ -1,9 +1,9 @@
-_id: ut_eda7fded45b84dd3830b9970413bfb42
+_id: ut_61faa086d05843fcb12956ad33d1653a
 type: UnitTest
-parentId: uts_96dd6dca372d4f81b3799904d628433c
-modified: 1686939149986
-created: 1686931553525
-requestId: req_9b72a62c45164b938696b2aa52b65709
+parentId: uts_1878d39f481e407f9bff1e7d2ef0ae78
+modified: 1686969511367
+created: 1686969337136
+requestId: req_4ce47d0833734f17bdb730e0600210f2
 name: Retorna 403 quando não envia o header X-API-key
 code: |-
   const response = await insomnia.send();

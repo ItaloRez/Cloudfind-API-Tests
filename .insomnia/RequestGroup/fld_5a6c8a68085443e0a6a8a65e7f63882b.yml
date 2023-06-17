@@ -1,0 +1,13 @@
+_id: fld_5a6c8a68085443e0a6a8a65e7f63882b
+type: RequestGroup
+parentId: wrk_8b77d1ab21754a59bfa499c468942a8c
+modified: 1686941451504
+created: 1686939429092
+name: SKUs
+description: ""
+environment:
+  resource: sku
+environmentPropertyOrder:
+  "&":
+    - resource
+metaSortKey: -1686939429092

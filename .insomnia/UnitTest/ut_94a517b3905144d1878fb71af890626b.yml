@@ -1,11 +1,11 @@
-_id: ut_dbf84c133d5f4a13a5ce9ad2fbda98af
+_id: ut_94a517b3905144d1878fb71af890626b
 type: UnitTest
-parentId: uts_96dd6dca372d4f81b3799904d628433c
-modified: 1686939541086
-created: 1686930179143
-requestId: req_8081fb435bb74a3bb072bae56be00451
-name: Retorna 401 quando não envia o header X-API-key correto
-code: >
+parentId: uts_2cf95504f31f43afb5549b266d490de8
+modified: 1686946310773
+created: 1686942397060
+requestId: req_85c8be3ce60443729ac16fddc5c7e0f0
+name: Retorna 401 quando não envia o X-API-Key correto
+code: >-
   const response = await insomnia.send();
 
 

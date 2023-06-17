@@ -1,0 +1,23 @@
+_id: ut_d1d47908ad974108888668529da44d6c
+type: UnitTest
+parentId: uts_96dd6dca372d4f81b3799904d628433c
+modified: 1686941107574
+created: 1686940840741
+requestId: req_83ae2310d6ac4e679c9f4f22aaa7e6eb
+name: A query de nome deve retornar apenas as instancias com o nome passado
+code: |
+  const response = await insomnia.send();
+
+  expect(response.status).to.equal(200);
+
+  const body = JSON.parse(response.data);
+
+  expect(body.data.skus).to.be.an('array');
+  expect(body.data.skus).to.have.lengthOf(1);
+
+  const sku1 = body.data.skus[0]
+  const name = sku1.name
+
+  const verifyString = name.includes("t1")
+
+  expect(verifyString).to.be.equal(true);

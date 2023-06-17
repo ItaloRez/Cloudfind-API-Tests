@@ -1,0 +1,22 @@
+_id: ut_795b3e484fff446fa86d86717506b385
+type: UnitTest
+parentId: uts_96dd6dca372d4f81b3799904d628433c
+modified: 1686940253818
+created: 1686939913299
+requestId: req_wrk_8b77d1ab21754a59bfa499c468942a8cea22a5c5
+name: Os objetos retornados devem ter os atributos principais
+code: |-
+  const response = await insomnia.send();
+
+  expect(response.status).to.equal(200);
+
+  const body = JSON.parse(response.data);
+
+  expect(body.data.skus).to.be.an('array');
+  expect(body.data.skus).to.have.lengthOf(2);
+  expect(body.data.skus[0]).to.have.property('id');
+  expect(body.data.skus[0]).to.have.property('name');
+  expect(body.data.skus[0]).to.have.property('price');
+  expect(body.data.skus[0]).to.have.property('ram');
+  expect(body.data.skus[0]).to.have.property('disk');
+  expect(body.data.skus[0]).to.have.property('cpu');

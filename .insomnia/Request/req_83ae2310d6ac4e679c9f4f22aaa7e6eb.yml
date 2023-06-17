@@ -1,20 +1,20 @@
-_id: req_wrk_8b77d1ab21754a59bfa499c468942a8cea22a5c5
+_id: req_83ae2310d6ac4e679c9f4f22aaa7e6eb
 type: Request
 parentId: fld_a5aff1cee39a4e6795a2319c3b4ffdaa
-modified: 1686949321046
-created: 1686929000758
-url: "{{ base_url }}/{{resource}}/"
-name: Get Skus
+modified: 1686941377090
+created: 1686940569001
+url: "{{ base_url }}/sku/"
+name: Get Skus by Name
 description: ""
 method: GET
 body: {}
 parameters:
   - name: query
     disabled: false
-    value: "{}"
+    value: '{"name": {"$regex": "t1", "$options": "i"}}'
     id: pair_2aab4b41c8e644118d25e1a6f2f390fe
     type: text
-    multiline: false
+    multiline: true
   - name: page
     disabled: false
     value: "0"
@@ -29,7 +29,7 @@ authentication:
   key: X-API-Key
   value: "{{ xApiKey }}"
   addTo: header
-metaSortKey: -1686929000758
+metaSortKey: -1686929000708
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true
